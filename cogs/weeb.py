@@ -57,29 +57,6 @@ class Command(commands.Cog):
 	                await ctx.channel.send(js["url"])
 	                print(r.json()["url"])
 	                await session.close()
-	@commands.command()
-	async def ewaifu(self,ctx, type:str ):
 
-	  	default = "sfw"
-	  	if (type in ['ass','ecchi','ero','hentai','maid','milf','oppai','oral','paizuri','selfies','uniform']) and ctx.channel.is_nsfw():
-	  		async with aiohttp.ClientSession() as session:
-	  			async with session.get("https://api.waifu.im/" + "nsfw/"  + type) as r:
-	  				if r.status == 200:
-	  					js = await r.json()
-	  					embed = discord.Embed()
-	  					embed.set_image(url = js.get('tags')[0].get('images')[0].get('url'))
-	  					await ctx.channel.send(embed = embed)
-	  					print(js.get('tags')[0].get('images')[0].get('url'))
-	  					await session.close()
-	  	
-	  	else:	  
-	  		async with aiohttp.ClientSession() as session:
-	  			async with session.get("https://api.waifu.im/" + default + "/" + type) as r:
-	  				if r.status == 200:
-	  					js = await r.json()
-	  					embed = discord.Embed()
-	  					await ctx.channel.send(embed = embed)
-	  					print(js.get('tags')[0].get('images')[0].get('url'))  
-	  					await session.close()              
 def setup(bot):
 	bot.add_cog(Command(bot))
