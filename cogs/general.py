@@ -213,8 +213,8 @@ class Command(commands.Cog):
 			pass
 	@commands.command()
 	async def routine(self, ctx):
-		if ctx.guild.id is not 860409257895919616: #This is the wanted guild id
-        	pass
+		if ctx.guild.id is not 860409257895919616: 
+			pass
 		else:
 			
 			await ctx.channel.send('https://media.discordapp.net/attachments/860409257895919616/910090669584961536/unknown.png')
