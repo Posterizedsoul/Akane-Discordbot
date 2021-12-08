@@ -11,10 +11,10 @@ class Spotify(commands.Cog):
         self.bot = bot
     @commands.command()
     async def spotify(self, ctx, user: discord.Member = None):
-        if user == None:
-            user = self.ctx.author
+        if self.user == None:
+            self.user = self.ctx.author
             pass
-        if user.activities:
+        if self.user.activities:
             for activity in user.activities:
                 if isinstance(activity, Spotify):
                     embed = discord.Embed(
