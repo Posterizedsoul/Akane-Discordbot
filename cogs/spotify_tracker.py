@@ -11,6 +11,7 @@ class Spotify(commands.Cog):
         self.bot = bot
     @commands.command()
     async def spotify(self, ctx, user: discord.Member = None):
+        self.user = user
         if self.user == None:
             self.user = self.ctx.author
             pass
