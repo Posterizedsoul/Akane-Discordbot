@@ -4,7 +4,7 @@ import datetime
 import editdistance
 import re
 
-# road ad regex, thanks road
+
 invitere = r"(?:https?:\/\/)?discord(?:\.gg|app\.com\/invite)?\/(?:#\/)([a-zA-Z0-9-]*)"
 # my own regex
 invitere2 = r"(http[s]?:\/\/)*discord((app\.com\/invite)|(\.gg))\/(invite\/)?(#\/)?([A-Za-z0-9\-]+)(\/)?"
@@ -25,7 +25,7 @@ class Snipe(commands.Cog):
         @bot.listen('on_message_edit')
         async def on_message_edit(before, after):
             if before.author.bot or after.author.bot:
-                return  # DEPARTMENT OF REDUNDANCY DEPARTMENT
+                return  #REDUNDANCY DEPARTMENT
             if (editdistance.eval(before.content, after.content) >= 10) and (
                     len(before.content) > len(after.content)):
                 self.snipes[before.channel.id] = [before, after]

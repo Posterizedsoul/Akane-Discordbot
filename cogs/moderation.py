@@ -1,3 +1,4 @@
+#Not a moderation bot so a simple moderation cog.
 import discord
 import datetime
 import asyncio
@@ -15,8 +16,6 @@ from discord.ext.commands import (
 class Mod(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-
-
     @commands.command()
     @commands.has_permissions(manage_messages=True)
     @commands.cooldown(1, 5, commands.BucketType.guild)

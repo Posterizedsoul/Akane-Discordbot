@@ -5,10 +5,7 @@ from random import randint
 import requests
 import aiohttp
 from aiohttp import request
-import giphy_client
-from giphy_client.rest import ApiException
 import pornhub
-import wikipedia
 from hentai import Hentai, Format
 from hentai import Utils, Sort, Option, Tag
 from bs4 import BeautifulSoup
@@ -182,9 +179,8 @@ class Command(commands.Cog):
 		                  await msg.edit(embed = embed)
 
 		    elif safe == 'search' and search_results.isdigit() and str(text):
-		      if text.lower() == 'bibek' or text.lower() == 'bb' or text.lower() == 'bbg':
-		        pass
-		      elif int(search_results) > 69:
+		      
+		      if int(search_results) > 69:
 		        await ctx.channel.send("69 is the limit kid. Grow your pp first")
 		        pass
 		      else:        
@@ -207,11 +203,6 @@ class Command(commands.Cog):
 		    else:pass
 	    except:
 		    await ctx.channel.send('No Mod/Admin Perms given.')
-
-
-
-
-
 	
 	@commands.command()
 	async def shub(self,ctx, no:int ,*,query:str):
@@ -248,9 +239,6 @@ class Command(commands.Cog):
 	            await ctx.send(embed = embed)
 	            print(video)
 	            print(video["url"])
-
-
-
 
 	@commands.command()
 	async def r34(self,ctx,n:int,*,tag:str):
@@ -342,8 +330,6 @@ class Command(commands.Cog):
 	                           
 	        for button in buttons:
 	            await msg.remove_reaction(button, ctx.author)
-	        
-
 	        if current != previous_page:
 	            embed.set_image(url =f"{image[current]}")
 	            await msg.edit(embed = embed)        
