@@ -299,15 +299,14 @@ class Music(commands.Cog, wavelink.WavelinkMixin):
     async def start_nodes(self):
         await self.bot.wait_until_ready()
 
-        nodes = {
-            "MAIN": {
-                "host": 'lavalink-on-replit.thnkscj.repl.co',
-                "port": 477,
-                "password": "youshallnotpass",
-                "identifier": "MAIN",
-                "region": "india",
-                "rest_uri": "http://lavalink-on-replit.thnkscj.repl.co:80",
-            }
+        nodes = {'MAIN': { 'host': 'katrina.qub.io',
+                           'port': 2333,
+                           'rest_uri': 'lavalinkrailway.herokuapp.com',
+                           'password': 'youshallnotpass',
+                           'region': 'us_central',
+                           'identifier': 'MAIN' 
+                           'secure': 'True',
+                           },
         }
 
         for node in nodes.values():
