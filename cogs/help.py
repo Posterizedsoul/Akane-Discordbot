@@ -111,23 +111,23 @@ class HelpCommand(commands.Cog):
 						embed.add_field(name = 'shuffle', value = 'shuffles the queue', inline = False)
 						embed.add_field(name = 'repeat', value = 'repeats song')
 						embed.add_field(name = 'queue', value = 'shows the queue')
-						embed.add_field(name = 'volume', value = 'sets the volume from 0 to 100')
-						embed.add_field(name = 'up , down', value = 'Increases/decreases the volume by 10')
-						embed.add_field(name = 'lyrics', value = 'Gives lyrics of the song queried.(Experimental feature)')
-						embed.add_field(name = 'eq', value = 'sets eq to current song. Available options: flat, boost, metal, piano')
-						embed.add_field(name = 'adveq', value = 'Advanced equalizer. Available options to set: band and gain')
-						embed.add_field(name = 'playing, np, now', value = 'Shows the current song information')
-						embed.add_field(name = 'restart', value = 'Restarts the current song')
+						embed.add_field(name = 'volume', value = 'sets the volume from 0 to 100', inline = False)
+						embed.add_field(name = 'up , down', value = 'Increases/decreases the volume by 10', inline = False)
+						embed.add_field(name = 'lyrics', value = 'Gives lyrics of the song queried.(Experimental feature)', inline = False)
+						embed.add_field(name = 'eq', value = 'sets eq to current song. Available options: flat, boost, metal, piano', inline = False)
+						embed.add_field(name = 'adveq', value = 'Advanced equalizer. Available options to set: band and gain', inline = False)
+						embed.add_field(name = 'playing, np, now', value = 'Shows the current song information', inline = False)
+						embed.add_field(name = 'restart', value = 'Restarts the current song', inline = False)
 
 						await msg.edit(embed = embed)
 					elif reaction.emoji == u"\U0001F6E0":
 						embed = discord.Embed(title = 'Simple Admin/Mod Commands.')
-						embed.add_field(name = 'tempmute', value = 'temporarily mutes for given amount of time.')
-						embed.add_field(name = 'mute', value = 'mutes until unmute')
-						embed.add_field(name = 'kick', value = 'kicks the mentioned user')
-						embed.add_field(name = 'tempban', value = 'bans for certain amount of time.(Experimental feature)')
-						embed.add_field(name = 'ban', value = 'bans the mentioned user')
-						embed.add_field(name = 'unban', value = 'unbans the mentioned user')
+						embed.add_field(name = 'tempmute', value = 'Temporarily mutes', inline = False)
+						embed.add_field(name = 'mute', value = 'Mutes', inline = False)
+						embed.add_field(name = 'kick', value = 'kicks', inline = False)
+						embed.add_field(name = 'tempban', value = 'temporarily bans', inline = False)
+						embed.add_field(name = 'ban', value = 'bans', inline = False)
+						embed.add_field(name = 'unban', value = 'Unbans', inline = False)
 						await msg.edit(embed = embed)
 					elif reaction.emoji ==  u"\U0001F5D1":
 						await msg.delete()
@@ -136,6 +136,6 @@ class HelpCommand(commands.Cog):
 					for button in buttons:
 						await msg.remove_reaction(button, ctx.author)
 		except:
-			await ctx.channel.send('Some error occoured or no admin/mod perms')
+			pass
 def setup(bot):
 	bot.add_cog(HelpCommand(bot))
