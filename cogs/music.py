@@ -299,12 +299,10 @@ class Music(commands.Cog, wavelink.WavelinkMixin):
     async def start_nodes(self):
         await self.bot.wait_until_ready()
 
-        nodes = {'MAIN': { 'host': 'katrina.qub.io',
+        nodes = {'MAIN': { 'host': 'lavalink.eu',
                            'port': 2333,
-                           'rest_uri': 'http://katrina.qub.io:2333',
-                           'password': 'terribleconsequences',
-                           'region': 'us_central',
-                           'identifier': 'MAIN' },
+                           'password': 'Raccoon',
+                        }
         }
 
         for node in nodes.values():
