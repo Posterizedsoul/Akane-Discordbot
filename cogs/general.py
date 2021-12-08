@@ -40,7 +40,7 @@ class Command(commands.Cog):
 	@commands.command()
 	async def DM(self,ctx, amount: int, user: discord.User, *, message=None):
 	    if message == None:
-	        await ctx.send('At least put a Message noob.')
+	        await ctx.send('At least put a Message.')
 	    else:
 	        if amount <= 69:
 
@@ -48,12 +48,10 @@ class Command(commands.Cog):
 	              await user.send(message)
 	          await ctx.channel.purge(limit=1)
 	          await ctx.author.send("Done")
-	          await ctx.channel.send("Done")
 	        else:
 	          await ctx.channel.send('69 is the limit')
 
 	@commands.command()
-	@commands.is_owner()
 	async def purge(self,ctx, amount: int):
 	    await ctx.channel.purge(limit=amount+1)
 
@@ -73,7 +71,7 @@ class Command(commands.Cog):
 	
 	@commands.command()
 	async def gif(self,ctx, *, search):
-	    api_key = "6KeA28E22pnFFm0IRmQFe7W7fRrOspGX"
+	    api_key = "YourAPIKEY"
 	    embed = discord.Embed(title=f"Requested by {ctx.author}")
 	    async with aiohttp.ClientSession() as session:
 	        # search
@@ -95,8 +93,8 @@ class Command(commands.Cog):
 
 
 
-	app_id = "b8bf96ed"
-	app_key = "1495e2f79571e2585e8183d60019a121"
+	app_id = "YourAppID"
+	app_key = "YourAppKey"
 	language_code = "en-us"
 	endpoint = "entries"
 
@@ -141,9 +139,7 @@ class Command(commands.Cog):
 
 	@commands.command()
 	async def booru(self,ctx, no:int,*,query:str):
-
 		try:
-
 			image_links = []
 			if no < 35:
 				for i in range(0, no):
@@ -200,8 +196,6 @@ class Command(commands.Cog):
 
 						await msg.delete()
 	                
-	              
-	              
 					for button in buttons:
 						await msg.remove_reaction(button, ctx.author)
 	              
@@ -211,55 +205,13 @@ class Command(commands.Cog):
 						await msg.edit(embed = embed)
 		except:
 			pass
-	@commands.command()
-	async def routine(self, ctx):
-		await ctx.channel.send('https://media.discordapp.net/attachments/860409257895919616/910090669584961536/unknown.png')
+	
+	
 	@commands.command()
 	async def invite(self, ctx):
-		embed = discord.Embed(title = "Admin/Moderator Permissions required (explicitly) else embed and moderation system won't work", url = 'https://discord.com/api/oauth2/authorize?client_id=867374334585470976&permissions=412790213751&scope=bot')
+		embed = discord.Embed(title = "Admin/Moderator Permissions required (explicitly) else embed and moderation system won't work", url = 'YourBOTInvitelinkhere')
 		await ctx.channel.send(embed = embed)
 
-	@commands.command()
-
-	async def tocrushy(self,ctx):
-		await ctx.channel.send('''
-i don’t really know you I can’t 
-	find a reason why my heart is out of my chest
-	the morning that I saw two angry people 
-	i knew that I couldn’t forget
-	everything I went thru
-	led me to say that I still wouldn’t settle for less
-	 
-	i miss my conversations
-	with the moon 
-	but we’d always end up talking about you
-	those table reservations 
-	so tired of sitting alone in the corner on end
-	my silly expectation
-	for thinking that you would go further than what we call next
-
-	i wish you would just notice all the glances you would take
-	through the hoard of tasteless people all those brooms swept them away
-	all my force stuck on this table and these orange metal plates
-	till my mind finds the courage theres none that I can do
-
-
-	we aren’t even dating and we never will be
-	but somehow you ruin my life anyway and that scares me
-	it scares me up to the point that I’m thinkin how
-	someone lives in my basement
-	over me and my body 
-	by being themselves
-
-	i wish you would just notice all the glances you would take
-	through the hoard of tasteless people all those brooms swept them away
-	all my force stuck on this table and these orange metal plates
-	till my mind finds the courage theres none that I can do
-
-	take all that you want from me cause I have nothing left 
-	to give you with security I swear I couldn’t let 
-	the thought of you escape the realm that I have sworn 
-	till my mind finds the courage theres none that I can do''')
 def setup(bot):
 	bot.add_cog(Command(bot))
 

@@ -4,7 +4,9 @@
 #All the scraping code is/will-be available in Fluby repository.
 #Switched to API's instead of scrapping everything on my own and bot runs much faster now.
 #This bot is entirely written in Discord.py and will be re-written in other libraries possibly hikari or nextcord or pycord.
-#Warning this bot was written for my personal use in my server so some functionality has been removed before uploading to
+#Warning this bot was written for my personal use in my server so some functionality has been removed before uploading it to github.
+
+
 import cogs
 from cogs.imports import *
 

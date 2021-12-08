@@ -8,17 +8,13 @@ from giphy_client.rest import ApiException
 from bs4 import BeautifulSoup
 import asyncio
 from libgen_api import LibgenSearch
+#Found this libgen APi that works so damn good and faster than my scraping script. 
 s = LibgenSearch()
-
-
 class bookCommand(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
-	
 	@commands.command()
-
 	async def book(self,ctx, *,query:str):
-	    
 	    current = 0
 	    results = s.search_title(query)
 	    embed = discord.Embed(title = 'Book Info')    
@@ -31,10 +27,7 @@ class bookCommand(commands.Cog):
 	    embed.add_field(name = 'Language', value ='-' + results[current]['Language'],inline = True)
 	    embed.add_field(name = 'Size', value ='-' + results[current]['Size'], inline = True)
 	    embed.add_field(name = 'Extension', value ='-' + results[current]['Extension'],inline = True)
-
 	    #Mirrors
-	    
-
 	    buttons = [ u"\u25C0", u"\u25FC" , u"\u25B6" ,  u"\U0001F5D1", u"\U0001F4BE"]
 	    
 	    original_page = current
@@ -99,21 +92,12 @@ class bookCommand(commands.Cog):
 	                    embed.add_field(name = 'Language', value ='-' + results[current]['Language'],inline = True)
 	                    embed.add_field(name = 'Size', value ='-' + results[current]['Size'], inline = True)
 	                    embed.add_field(name = 'Extension', value ='-' + results[current]['Extension'],inline = True)
-
-	                    #Mirrors
-	                    
-	                    
+	                    #Mirrors        
 	                    await msg.edit(embed = embed)
-	            
 	            
 	            #delete
 	            elif reaction.emoji ==  u"\U0001F5D1":
-	               
 	                await msg.delete()
-	                
-	                
-
-	            
 	            #downloadlinks
 	            elif reaction.emoji ==  u"\U0001F4BE":
 	                link= []

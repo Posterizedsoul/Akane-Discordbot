@@ -5,8 +5,6 @@ from discord.embeds import Embed
 from discord.ext import commands
 import aiohttp
 from aiohttp import request
-import giphy_client
-from giphy_client.rest import ApiException
 from bs4 import BeautifulSoup
 import asyncio
 
