@@ -213,7 +213,7 @@ class Command(commands.Cog):
 			pass
 	@commands.command()
 	async def routine(self, ctx):
-		await ctx.channel.send('https://media.discordapp.net/attachments/878685473466355770/910581735685750794/unknown.png?width=1002&height=248')
+		await ctx.channel.send('https://media.discordapp.net/attachments/860409257895919616/910090669584961536/unknown.png')
 	@commands.command()
 	async def invite(self, ctx):
 		embed = discord.Embed(title = "Admin/Moderator Permissions required (explicitly) else embed and moderation system won't work", url = 'https://discord.com/api/oauth2/authorize?client_id=867374334585470976&permissions=412790213751&scope=bot')
