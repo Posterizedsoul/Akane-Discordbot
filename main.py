@@ -1,4 +1,10 @@
 
+
+#Help cog has been removed because it was causing some weird problems. Add your own if you want to host this bot.
+#All the scraping code is/will-be available in Fluby repository.
+#Switched to API's instead of scrapping everything on my own and bot runs much faster now.
+#This bot is entirely written in Discord.py and will be re-written in other libraries possibly hikari or nextcord or pycord.
+#Warning this bot was written for my personal use in my server so some functionality has been removed before uploading to
 import cogs
 from cogs.imports import *
 
@@ -19,7 +25,7 @@ async def ch_pr():
     await bot.change_presence(activity = discord.Game(name = status))
     await asyncio.sleep(18)
 
-extentions = ['cogs.help', 'cogs.book', 'cogs.general', 'cogs.nsfw','cogs.weeb','cogs.moderation','cogs.music','cogs.spotify_tracker','cogs.snipe']    
+extentions = ['cogs.book', 'cogs.general', 'cogs.nsfw','cogs.weeb','cogs.moderation','cogs.music','cogs.spotify_tracker','cogs.snipe']    
 for ext in extentions:
     bot.load_extension(ext)
 
