@@ -89,9 +89,7 @@ class HelpCommand(commands.Cog):
 						embed.add_field(name = 'SFW', value = '`neko, kitsune, hug, pat, waifu, cry, kiss, slap, smug, punch`', inline = True)
 						embed.add_field(name = 'NSFW', value = '`lewd`', inline = True)
 
-						embed.add_field(name = 'ewaifu', value = '**oi ewaiifu <any of the following term from sfw/nsfw>**', inline = False)
-						embed.add_field(name = 'SFW', value = '`waifu, all, maid`', inline = True)
-						embed.add_field(name = 'NSFW', value = '`ass, ecchi, ero, hentai, maid, milf, oppai, oral, paizuri, selfies, uniform`', inline = True)
+						
 
 						await msg.edit(embed = embed)
 
