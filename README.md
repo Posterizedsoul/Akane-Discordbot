@@ -1,6 +1,6 @@
 How to deploy it to heroku?<br />
  -> Fork this repository.<br />
- -> Connect your github to heroku.<br />
+ -> Connect your github account to heroku.<br />
  -> Add TOKEN in Environment Vars.<br />
  -> Add API keys in giphy and dictionary section.<br />
  -> Deploy it from it there.<br />
