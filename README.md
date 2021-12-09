@@ -1,6 +1,9 @@
 How to deploy it to heroku?
- -> Fork this repository.
- -> Connect your github to heroku and deploy it from it there.
+ -> Fork this repository.<br />
+ -> Connect your github to heroku.
+ -> Add TOKEN in Environment Vars
+ -> Add API keys in giphy and dictionary section.
+ -> Deploy it from it there.
 
 Help cog has been removed because it was causing some weird problems. Add your own if you want to host this bot.
 
